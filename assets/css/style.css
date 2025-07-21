@@ -1,0 +1,215 @@
+/* Import Font dari Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Palet Warna */
+:root {
+  --bg-primary: #0a041c;
+  --bg-secondary: #2b2043;
+  --accent-color: #f7c800;
+  --text-primary: #ffffff;
+  --text-secondary: #bdbdbd;
+}
+
+/* Pengaturan Dasar */
+html {
+  scroll-behavior: smooth; /* INI KUNCINYA untuk navigasi yang mulus */
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6; /* Menambah kerapian teks */
+}
+
+/* Header */
+header {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+  color: var(--text-secondary);
+}
+
+/* Navigasi */
+nav {
+  background-color: var(--bg-secondary);
+  border-bottom: 3px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  position: sticky; /* Membuat navigasi tetap di atas saat scroll */
+  top: 0;
+  z-index: 1000; /* Memastikan navigasi di atas elemen lain */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  /* Menambah gaya untuk link aktif */
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+/* Konten Utama & Bagian-bagiannya */
+main {
+  padding: 1rem;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem; /* Padding atas & bawah besar untuk memberi ruang scroll */
+  min-height: 50vh; /* Tinggi minimal agar ada ruang untuk scroll */
+  display: flex; /* Untuk memudahkan penataan konten */
+  flex-direction: column; /* Mengatur item dalam kolom */
+  align-items: center; /* Memusatkan konten secara horizontal */
+  justify-content: center; /* Memusatkan konten secara vertikal jika ada ruang */
+  text-align: center; /* Memusatkan teks dalam section */
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+section p {
+  max-width: 800px; /* Batasi lebar paragraf agar tidak terlalu panjang */
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem; /* Ukuran font lebih besar untuk readability */
+  line-height: 1.8; /* Tinggi baris untuk kerapian teks */
+}
+
+/* Kartu Film */
+.movie-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem; /* Jarak dari judul section */
+}
+
+.movie-card {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(247, 200, 0, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-card .movie-info {
+  padding: 1rem;
+}
+
+.movie-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.movie-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Audio & Video Players */
+section audio,
+section video {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%; /* Memastikan player responsif */
+}
+
+/* Form Registrasi */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto 0; /* Jarak dari paragraf di atasnya */
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.registration-form input,
+.registration-form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.registration-form input {
+  background-color: #3e2f5f;
+  color: var(--text-primary);
+}
+
+.registration-form input::placeholder {
+  color: var(--text-secondary);
+}
+
+.registration-form button {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+  background-color: #ffeb80;
+}
+
+/* Pesan Sukses Registrasi */
+#registration-success-message {
+  background-color: #4caf50; /* Warna hijau untuk sukses */
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

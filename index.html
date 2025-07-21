@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Film & Pendaftaran</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/js/script.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>REVIEW FILM</h1>
+      <p>
+        Halo, Pecinta Film! 👋 Yuk, belajar bareng cara bikin review film yang
+        kece dan berkelas! Isi data kamu di bawah dan jadi bagian dari komunitas
+        penikmat film yang kreatif!
+      </p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#film">Film</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#registrasi">Registrasi</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="film">
+        <h2>Film Yang Akan Direview</h2>
+        <div class="movie-container">
+          <div class="movie-card">
+            <img
+              src="assets/gambar/g1.jpg"
+              alt="Poster How To Train Your Dragon"
+            />
+            <div class="movie-info">
+              <h3>How To Train Your Dragon</h3>
+              <p>Ketika musuh menjadi sahabat, dunia pun berubah.</p>
+            </div>
+          </div>
+          <div class="movie-card">
+            <img src="assets/gambar/g2.jpg" alt="Poster Elio" />
+            <div class="movie-info">
+              <h3>Elio</h3>
+              <p>
+                Elio si bocah 11 tahun yang terseret dalam petualangan luar
+                angkasa saat alien mengira ia adalah duta Bumi.
+              </p>
+            </div>
+          </div>
+          <div class="movie-card">
+            <img
+              src="assets/gambar/g3.jpg"
+              alt="Poster Spider-Man: Into The Spider Verse"
+            />
+            <div class="movie-info">
+              <h3>Spider-Man: Into The Spider-Verse</h3>
+              <p>Dimensi berbeda, misi yang sama: selamatkan dunia!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="audio">
+        <h2>Cuplikan Soundtrack Film</h2>
+        <p>
+          Nikmati cuplikan soundtrack dari film film yang akan direview dalam 1
+          format audio.
+        </p>
+        <audio controls>
+          <source src="assets/audio/a1.mp3" type="audio/mpeg" />
+          Browser Anda tidak mendukung elemen audio.
+        </audio>
+      </section>
+
+      <section id="video">
+        <h2>Video Review</h2>
+        <p>
+          Saksikan pembahasan mendalam tentang alur, akting, hingga pesan
+          tersembunyi di balik film film tersebut dalam 1 format video.
+        </p>
+        <video width="640" height="360" controls>
+          <source src="assets/video/v1.mp4" type="video/mp4" />
+          Browser Anda tidak mendukung elemen video.
+        </video>
+      </section>
+
+      <section id="registrasi">
+        <h2>Registrasi</h2>
+        <p>Tertarik belajar cara review film? yuk registrasi di bawah ini!</p>
+        <form class="registration-form">
+          <input type="text" placeholder="Nama Lengkap" required />
+          <input type="email" placeholder="Alamat Email" required />
+          <button type="submit">Daftar Sekarang</button>
+        </form>
+        <div id="registration-success-message" style="display: none">
+          <p>Selamat, Anda sudah registrasi!</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
